@@ -1,0 +1,25 @@
+[package]
+name = "visloc-eval"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Trajectory scoring (timestamp association, Umeyama ATE, windowed drift) for visloc-rs component benchmarks."
+readme.workspace = true
+homepage.workspace = true
+repository.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+# Scoring must not depend on any algorithm crate under test. visloc-tracking is
+# used only for `umeyama_similarity_transform`; with default features it pulls no
+# ONNX runtime.
+[dependencies]
+nalgebra = { workspace = true }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+visloc-tracking = { path = "../../pipelines/tracking", version = "0.2.1" }
+
+[dev-dependencies]
+rand = { workspace = true }
+sha2 = { workspace = true }

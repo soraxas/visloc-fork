@@ -37,6 +37,7 @@ members = [
     "crates/sift-gpu",
     "crates/ba-gpu",
     "crates/dpvo-cuda-runtime",
+    "crates/eval",
     "pipelines/localization",
     "pipelines/tracking",
     "pipelines/mapping",

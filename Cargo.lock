@@ -1553,6 +1553,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "visloc-eval"
+version = "0.2.1"
+dependencies = [
+ "nalgebra",
+ "rand",
+ "serde",
+ "serde_json",
+ "sha2",
+ "visloc-tracking",
+]
+
+[[package]]
 name = "visloc-fusion"
 version = "0.2.1"
 dependencies = [
